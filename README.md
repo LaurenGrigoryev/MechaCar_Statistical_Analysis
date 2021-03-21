@@ -19,3 +19,7 @@ When I look at the total variance of PSI (or Pounds per Square Inch) for the car
 
 However, when I take a closer look at each lot individually, I can see that Lots 1 and 2 meet the standard with variances at about 1 and 7 respectively, well under 100, but Lot 3 has a variance of 170, well over the 100 cut off, [as pictured here]("https://github.com/LaurenSonis/MechaCar_Statistical_Analysis/blob/main/2021-03-21%20(2).png"), so no, not all of the lots meet the standard individually.
 
+## T-Tests on Suspension Coils
+When I conducted a t-test on the summary data, I saw that the true mean was not equal to the population mean of 1,500, but rather closer to just over 700 [as pictured here]().
+
+When I conducted a t-test on individual manufacturing lots, I saw that the individual lots' means were much closer to the population mean, with [Lot1]() hitting 1,500 when rounded, [Lot2]() coming in close at 1,500.2, and [Lot3]() coming in at 1,496.14.
