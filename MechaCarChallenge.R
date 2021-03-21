@@ -8,7 +8,11 @@ head(suspension_table)
 total_summary <- suspension_table %>% summarize(Mean=mean(PSI),Median=median(PSI),Variance=var(PSI),SD=sd(PSI)) #create summary table
 lot_summary <- suspension_table %>% group_by(Manufacturing_Lot) %>% summarize(Mean=mean(PSI),Median=median(PSI),Variance=var(PSI),SD=sd(PSI), .groups='keep') #create lot_summary df using group_by
 t.test(total_summary, mu = 1500) #compare sample versus population means
-t.test(lot_summary, mu = 1500) #compare sample vs. population mean
-Lot1 <- subset(lot_summary, Manufacturing_Lot=='Lot1') #Sample Lot1 vs. population mean
-Lot2 <- subset(lot_summary, Manufacturing_Lot=='Lot2') #Sample Lot2 vs. population mean
-Lot3 <- subset(lot_summary, Manufacturing_Lot=='Lot3') #Sample Lot3 vs. population mean
+
+?t.test()
+
+t.test(subset(suspension_table, Manufacturing_Lot=="Lot1")$PSI,mu=1500)#compare individual lots to pop, Lot1
+t.test(subset(suspension_table, Manufacturing_Lot=="Lot2")$PSI,mu=1500)#compare individual lots to pop, Lot2
+t.test(subset(suspension_table, Manufacturing_Lot=="Lot3")$PSI,mu=1500)#compare individual lots to pop, Lot3
+
+       
